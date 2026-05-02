@@ -1,0 +1,49 @@
+
+Avishek Chatterjee
+
+  • You
+
+AI-Powered Marketing & Creative Technologist | GenAI Content Production, Campaigns & AI Bootcamps | Festival-Selected AI Filmmaker | Anthropic Certified
+
+3d • Edited • 
+
+
+20 clicks. 
+
+That is all it took for the code reviewer to show me how someone could burn through my API credits on OpenRouter.
+
+I have shipped creative apps on Netlify before. Front-end work, where everything is visual and you can see what is breaking. 
+
+This one was different. 
+
+Streamlit, Python, server-side logic, real API calls, every click with a cost. My first proper engineering project in the Turing College AI Engineering program, and the first time I had to think about what happens behind the interface, not just on it.
+
+I built an AI Interview Practice app. You paste a job description, type your answer, the AI judges it in real time using 5 different prompt techniques. 
+
+I deployed it on Streamlit, felt good about it, submitted for review.
+
+Then Vytautas Bunevičius, a software engineer at Nord Security, reviewed it. He liked the structure, the prompt design, the input validation. Then he clicked the start button about 20 times in a row and said every single one of those was a paid API call hitting my account. 
+
+No limit. No check. Nothing stopping someone from doing this on the live app.
+
+I had no answer.
+
+That was the first hole. Not a coding problem. A money problem.
+
+The second was prompt injection. I had a list of phrases the app would reject. He asked whether it worked in German, Lithuanian, or Polish. It did not. He asked whether it worked when someone rephrased the same intent in different words. Also no.
+
+A list of banned phrases is not a real safeguard.
+
+The technical fixes now on my list are rate limiting, better abuse protection, stronger prompt-injection handling, logging, and cleaner structure.
+
+But the bigger lesson was not just technical.
+
+Building the app was one skill. Thinking about who might misuse it, what could break, and what happens when nobody is watching is another.
+
+I spent two weeks on the first part and almost no time on the second.
+
+The review fixed that ratio in 45 minutes.
+
+That is what I appreciate about the Turing College AI Engineering program. Code reviews from engineers like Vytautas show you what you actually built, not just what you thought you built.
+
+Live app in the first comment.

@@ -146,34 +146,42 @@ export const projects: Project[] = [
     title: 'Far Out',
     slug: 'far-out',
     category: 'Prototype',
-    placeholder: true,
+    thumbnail: '/farout-preview.png',
     oneLiner:
-      'A generative space exploration experience — procedural visuals and sound built around the aesthetics of deep space and cosmic scale.',
+      'A cinematic browser experience built around the aesthetics of deep space — dark, atmospheric, and vibe-coded from concept to deployment.',
+    liveUrl: 'https://farout.netlify.app/',
     context:
-      'Far Out is a browser-based generative art project exploring what it feels like to be small in an enormous universe. Built as a rapid prototype using AI-assisted coding tools.',
+      'Far Out is a rapid creative prototype exploring what it feels like to be at the edge of known space. The brief was purely aesthetic: build something that feels cinematic, mysterious, and intentional — using AI-assisted tools to go from idea to shipped experience as fast as possible.',
     problem:
-      'TODO — add project description and links.',
+      'Can a browser experience feel genuinely cinematic — not just visually dark, but tonally coherent — when built without a traditional design or development team, using only AI-assisted tools and a clear creative direction?',
     myRole: [
       'Concept and creative direction',
-      'Frontend build',
-      'Visual and sound design',
-      'Deployment',
+      'Visual design — typography, motion, atmosphere',
+      'Frontend build (AI-assisted)',
+      'Copywriting and tone of voice',
+      'Deployment (Netlify)',
     ],
     process: [
-      'TODO — add process detail when links are provided.',
+      'Concept — "what does the edge of space feel like as a browser experience?"',
+      'Visual direction — deep black, cinematic serif typography, minimal motion, maximum atmosphere',
+      'Build — AI-assisted coding with Cursor, rapid iteration on feel and pacing',
+      'Copy — "INITIALIZE LINK... Awaiting confirmation..." as the only text, to hold tension',
+      'Deployment — live on Netlify',
     ],
     tools: [
       { category: 'AI coding', items: ['Cursor', 'Google AI Studio'] },
-      { category: 'Frontend', items: ['React'] },
+      { category: 'Frontend', items: ['React', 'CSS animations'] },
       { category: 'Deployment', items: ['Netlify'] },
     ],
-    output: 'TODO — add live URL and demo video.',
-    result: 'TODO — add result and link.',
+    output:
+      'A fully deployed cinematic browser experience — dark, minimal, atmospheric. Live at farout.netlify.app.',
+    result:
+      'Live and deployed. Demonstrates design-to-code speed and tonal control in a browser environment.',
     demonstrates:
-      'Generative visual systems, creative coding, rapid prototyping, AI-assisted development.',
+      'Creative direction, vibe-coded rapid prototyping, visual atmosphere, AI-assisted frontend development, design instinct.',
     hiringAudience:
-      'Creative Technologist · AI Prototyper · Experience Designer',
-    tags: ['Generative Art', 'Space', 'Creative Coding', 'Rapid Prototyping'],
+      'Creative Technologist · AI Prototyper · Experience Designer · Forward Deployed Creative',
+    tags: ['Creative Coding', 'Vibe Coding', 'Cursor', 'Atmosphere', 'Rapid Prototyping'],
   },
 
   {
@@ -181,34 +189,45 @@ export const projects: Project[] = [
     title: 'Sounds of Bengal',
     slug: 'sounds-of-bengal',
     category: 'Prototype',
-    placeholder: true,
+    thumbnail: '/sounds-of-bengal-preview.png',
     oneLiner:
-      'An interactive archive of generative soundscapes rooted in Bengali musical traditions — bridging cultural memory and AI sound tools.',
+      'An interactive browser experience built for Bengali New Year — tap to awaken the sounds of the festival, blending cultural memory with generative audio and immersive design.',
+    liveUrl: 'https://sounds-of-bengal.netlify.app/',
     context:
-      'Sounds of Bengal is a personal project exploring how AI music generation tools can engage with non-Western musical traditions. The work sits at the intersection of cultural memory, generative audio, and interactive design.',
+      'Built for Pohela Boishakh (Bengali New Year 1432), Sounds of Bengal is a personal creative project exploring how AI-assisted tools and Web Audio can honour cultural traditions in a browser. The prompt was specific: what does the festival feel like, sonically and visually, when you build it from scratch with generative tools?',
     problem:
-      'TODO — add project description and links.',
+      'How do you translate the texture of a cultural festival — the sounds, the warmth, the Bengali script on screen — into a browser experience that feels intentional, not superficial? And how do you build it fast enough that it ships for the actual occasion?',
     myRole: [
       'Concept and creative direction',
-      'Sound design and curation',
-      'Frontend build',
-      'AI tool workflow design',
+      'Cultural research and aesthetic decisions',
+      'Frontend build — interaction design, motion, typography',
+      'Sound design and audio curation',
+      'Bengali copywriting and visual identity',
+      'Deployment (Netlify)',
     ],
     process: [
-      'TODO — add process detail.',
+      'Concept — a festival entry experience: dark, warm, atmospheric, interactive',
+      'Visual design — Bengali script ("উৎসবে স্বাগতম"), festival instrument iconography, deep warm palette',
+      'Interaction design — "Tap anywhere to awaken the sounds of Bengal" as the core mechanic',
+      'Audio layer — ambient festival soundscapes triggered by user interaction',
+      'AI-assisted build — rapid development with Cursor from visual concept to deployed experience',
+      'Deployed for Pohela Boishakh 1432',
     ],
     tools: [
-      { category: 'AI Audio', items: ['Suno AI', 'MusicFX'] },
-      { category: 'Frontend', items: ['React'] },
+      { category: 'AI coding', items: ['Cursor'] },
+      { category: 'Frontend', items: ['React', 'CSS animations'] },
       { category: 'Audio', items: ['Web Audio API'] },
+      { category: 'Deployment', items: ['Netlify'] },
     ],
-    output: 'TODO — add live URL and demo.',
-    result: 'TODO — add result.',
+    output:
+      'A fully deployed interactive browser experience — Bengali-language, atmospheric, touch-triggered, and sound-responsive. Live at sounds-of-bengal.netlify.app.',
+    result:
+      'Live and deployed for Pohela Boishakh 1432. Demonstrates cultural sensitivity, rapid prototyping, and generative audio design in a browser environment.',
     demonstrates:
-      'Cultural AI, generative audio, creative coding, interactive experience design.',
+      'Cultural creative technology, interactive sound design, vibe-coded prototyping, Bengali cultural context, AI-assisted frontend development.',
     hiringAudience:
-      'Creative Technologist · AI Music · Cultural Tech · Experience Designer',
-    tags: ['AI Music', 'Cultural Tech', 'Generative Audio', 'Bengali Music'],
+      'Creative Technologist · AI Prototyper · Experience Designer · Cultural Tech · Interactive Sound',
+    tags: ['Cultural Tech', 'Web Audio', 'Bengali', 'Interactive', 'Vibe Coding'],
   },
 
   {
@@ -250,6 +269,52 @@ export const projects: Project[] = [
     hiringAudience:
       'Creative Technologist · AI Music Tools · Browser Audio · Forward Deployed Creative',
     tags: ['React', 'Web Audio API', 'AI Music', 'DAW', 'Creative Coding'],
+  },
+
+  {
+    id: 'ai-interview-app',
+    title: 'AI Interview Practice App',
+    slug: 'ai-interview-app',
+    category: 'Prototype',
+    oneLiner:
+      'A Python/Streamlit app that judges interview answers in real time using 5 prompt techniques — built as part of the Turing College AI Engineering program and code-reviewed by a Nord Security engineer.',
+    liveUrl: 'https://ai-interview-practice-app-made-by-avi-ai.streamlit.app/',
+    context:
+      'My first proper backend engineering project — not front-end where everything is visual and you can see what is breaking. Streamlit, Python, server-side logic, real API calls, every click with a cost. Built as part of the Turing College AI Engineering program.',
+    problem:
+      'Building the app was one skill. Thinking about who might misuse it, what could break, and what happens when nobody is watching is another. I spent two weeks on the first part and almost no time on the second.',
+    myRole: [
+      'Product concept and specification',
+      'Python / Streamlit development',
+      'Prompt engineering — 5 distinct evaluation techniques',
+      'API integration (OpenRouter)',
+      'Input validation and UX logic',
+      'Security review response and iteration',
+    ],
+    process: [
+      'Concept — paste a job description, type your answer, get AI judgment using 5 prompt techniques',
+      'Build — Python/Streamlit app with real API calls via OpenRouter',
+      'Deploy — shipped live on Streamlit, felt good about it, submitted for review',
+      'Code review — Vytautas Bunevičius (Nord Security engineer) clicked start 20 times in a row. Every click: a paid API call. No limit. No check.',
+      'Holes found — no rate limiting, prompt injection bypass worked in German, Lithuanian, Polish, and via rephrasing',
+      'Lesson — a list of banned phrases is not a real safeguard. Building is one skill; thinking about abuse is another',
+      'Next — rate limiting, better abuse protection, stronger prompt-injection handling, logging, cleaner structure',
+    ],
+    tools: [
+      { category: 'Backend', items: ['Python', 'Streamlit'] },
+      { category: 'AI', items: ['OpenRouter', 'Claude', 'ChatGPT'] },
+      { category: 'Prompt design', items: ['5 evaluation techniques'] },
+      { category: 'Program', items: ['Turing College AI Engineering'] },
+    ],
+    output:
+      'Live Streamlit app: paste a job description, type your answer, receive AI judgment via 5 prompt techniques. Code review from a professional engineer at Nord Security.',
+    result:
+      'Live at streamlit.app. Got a real professional code review that exposed API abuse risks and prompt injection gaps. The review fixed my blind spots in 45 minutes.',
+    demonstrates:
+      'Python development, Streamlit, prompt engineering, API integration, security thinking, learning from professional code review, backend awareness.',
+    hiringAudience:
+      'AI Engineer · Creative Technologist · Prompt Engineer · AI Product Builder · AI Enablement',
+    tags: ['Python', 'Streamlit', 'Prompt Engineering', 'OpenRouter', 'AI Engineering'],
   },
 
   // ─── TEACH ───────────────────────────────────────────────────────────────
