@@ -54,7 +54,7 @@ export function Navbar() {
           </span>
           <span
             className="inline-block rounded-full bg-primary flex-shrink-0 mx-[3px]"
-            style={{ width: "5px", height: "5px" }}
+            style={{ width: "5px", height: "5px", marginBottom: "0.3em" }}
           />
           <span
             className={cn(

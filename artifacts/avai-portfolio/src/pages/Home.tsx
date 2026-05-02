@@ -32,7 +32,7 @@ export default function Home() {
               <span>AV</span>
               <span
                 className="inline-block rounded-full bg-primary flex-shrink-0 mx-[0.04em]"
-                style={{ width: "0.13em", height: "0.13em" }}
+                style={{ width: "0.13em", height: "0.13em", marginBottom: "0.22em" }}
               />
               <span>AI</span>
             </h1>
