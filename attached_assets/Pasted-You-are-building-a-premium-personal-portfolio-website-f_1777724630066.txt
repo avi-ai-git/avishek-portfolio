@@ -1,0 +1,155 @@
+You are building a premium personal portfolio website for Avishek Chatterjee, an AI Creative Technologist based in Berlin.
+
+Important: this is not a generic developer portfolio, not a startup landing page, and not a random AI-generated shiny website. It is a role-focused portfolio for creative technologist, AI marketing, AI enablement, and design-engineering-adjacent roles.
+
+The core positioning:
+
+Avishek turns emerging AI tools into practical prototypes, campaigns, learning systems, and visual workflows.
+
+The portfolio should tell one clear story:
+
+I build, teach, and communicate AI through prototypes, campaigns, and creative systems.
+
+Primary audience:
+- Creative Technologist hiring managers
+- AI marketing / product marketing teams
+- AI enablement and learning teams
+- Design-engineering-adjacent teams looking for strong taste, prototyping ability, and AI-native workflows
+
+Do not position Avishek as a senior software engineer or senior design engineer. Position him as:
+AI Creative Technologist
+Generative AI Workflows
+Interactive Prototyping
+AI Enablement
+Content Systems
+Campaign Storytelling
+Design-Engineering Adjacent
+
+Build this as a polished, responsive portfolio website using:
+- Vite
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion for subtle animations
+- A simple JSON or TypeScript data file for project content
+
+Design direction:
+- Premium editorial + creative technology
+- Dark, cinematic, intelligent, but readable
+- Avoid generic AI gradients, robot icons, brain icons, crypto aesthetics, and stock imagery
+- Use strong typography, spacing, project cards, subtle motion, and case-study depth
+- Visual tone can include dark terminal references, signal/red accent details, monochrome/off-white contrast, and warm editorial case-study sections
+- It should feel like a high-end creative technologist portfolio, not a template
+
+Site architecture:
+
+1. Home page
+Sections:
+- Hero
+- Positioning statement
+- Three tracks: Prototype / Teach / Campaign
+- Featured work
+- Why this work matters
+- Selected tools/workflows
+- Contact CTA
+
+Hero copy direction:
+Title: AI Creative Technologist
+Subtitle: I build AI-assisted prototypes, learning systems, campaigns, and visual workflows.
+Supporting line: Based in Berlin. Working across generative AI, creative production, AI education, and content systems.
+
+Three tracks:
+Prototype:
+Interactive experiments, browser-based tools, AI-assisted front-end workflows, visual systems.
+Projects: Fractal Breaths, AI prototyping lab, AV.AI site itself.
+
+Teach:
+GenAI bootcamps, workshops, learning formats, curriculum, certificates, enablement.
+Projects: GenAI Bootcamp, AI Tool of the Month, prompt/workflow education.
+
+Campaign:
+Campaign storytelling, founder videos, knowledge hubs, newsletters, multi-channel assets.
+Projects: HIKE Demo Day, #hikemussbleiben, GIZ learning/innovation communication.
+
+2. Work index page
+Show all case studies as filterable cards:
+- Prototype
+- Teach
+- Campaign
+- Film / Visual AI
+- Learning UX
+
+3. Case-study pages
+Create separate pages for:
+- CTRL+ALT+DEITY.EXE
+- Fractal Breaths
+- GenAI Bootcamp
+- HIKE Knowledge Hub and #hikemussbleiben Campaign
+- GIZ Learning UX and Innovation Work
+
+Each case study should follow this structure:
+- One-line summary
+- Context
+- Problem / challenge
+- My role
+- Process
+- Tools / workflow
+- Output
+- Result / proof
+- What this demonstrates for employers
+
+Use placeholders where exact data/assets are missing. Do not invent metrics, client names, awards, or outcomes. Mark missing proof clearly as TODO.
+
+4. Lab page
+Create an AI Lab page for smaller vibe-coding and creative technology experiments:
+- Fractal visual systems
+- Audio/web experiments
+- Replit builds
+- Claude/Codex/Cursor workflows
+- Prompt-to-prototype experiments
+
+5. About page
+Position Avishek as:
+Berlin-based AI Creative Technologist working across generative AI, campaign storytelling, AI education, content systems, and interactive prototyping.
+
+Mention strengths:
+- Translating complex technology into clear stories
+- Building useful AI workflows
+- Designing workshops and learning experiences
+- Producing visual/content systems
+- Rapid prototyping with AI coding tools
+
+6. Contact section
+Include CTA:
+Available for creative technologist, AI marketing, AI enablement, and AI prototyping roles.
+
+Technical requirements:
+- Fully responsive
+- Accessible semantic HTML
+- Good keyboard focus states
+- Fast loading
+- Clean file structure
+- No broken links
+- No fake external links
+- Use placeholder assets from /public/placeholders if needed
+- Create reusable components:
+  - Layout
+  - Navbar
+  - Footer
+  - Hero
+  - TrackCard
+  - ProjectCard
+  - CaseStudyLayout
+  - ToolBadge
+  - CTA
+- Create project data in src/data/projects.ts
+
+Before coding, create a project plan and file structure. Then build step by step.
+
+After implementation:
+1. Run the app.
+2. Fix errors.
+3. Check mobile responsiveness.
+4. Check all routes.
+5. Summarize what was built.
+6. List exactly what content/assets I still need to provide.

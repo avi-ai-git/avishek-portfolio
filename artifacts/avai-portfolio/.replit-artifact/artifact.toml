@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "AV.AI — Avishek Chatterjee Portfolio"
+version = "1.0.0"
+id = "artifacts/avai-portfolio"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24059
+
+[services.development]
+run = "pnpm --filter @workspace/avai-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/avai-portfolio", "run", "build" ]
+publicDir = "artifacts/avai-portfolio/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24059"
+BASE_PATH = "/"
