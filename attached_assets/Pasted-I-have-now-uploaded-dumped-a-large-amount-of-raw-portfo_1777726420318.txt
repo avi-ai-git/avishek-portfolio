@@ -1,0 +1,182 @@
+I have now uploaded/dumped a large amount of raw portfolio material into this Replit project: Notion content, screenshots, links, PDFs, project notes, campaign materials, and work samples.
+
+Your next task is NOT to redesign the site yet.
+
+Your task is to audit, organize, and structure the content into a clear portfolio information architecture before making major visual or code changes.
+
+Important positioning:
+
+This portfolio is for Avishek Chatterjee, an AI Creative Technologist based in Berlin.
+
+The site should support these role directions:
+1. Creative Technologist
+2. AI Marketing / Product Marketing / Content Systems
+3. AI Enablement / Learning Experience
+4. Design-engineering-adjacent prototyping roles
+
+The core professional story is:
+
+Avishek builds, teaches, and communicates AI through prototypes, campaigns, learning systems, and creative workflows.
+
+Do not make this a generic developer portfolio.
+Do not make this a generic marketing portfolio.
+Do not make this a random AI art portfolio.
+Do not over-position him as a senior software engineer or senior design engineer.
+
+The portfolio should be structured around three main tracks:
+
+1. Prototype
+Interactive experiments, vibe-coded apps, browser-based tools, AI-assisted front-end workflows, visual systems.
+
+2. Teach
+GenAI bootcamps, workshops, AI education, enablement, learning formats, certificates, curriculum.
+
+3. Campaign
+Campaign storytelling, founder videos, knowledge hubs, newsletters, multi-channel assets, GIZ/HIKE communications.
+
+Now do the following carefully.
+
+PHASE 1: CONTENT INVENTORY
+
+Inspect all uploaded material and create a file called:
+
+/docs/CONTENT_INVENTORY.md
+
+In that file, list:
+- every project or work sample you find
+- source material available for each project
+- screenshots/assets available
+- PDFs available
+- links available
+- missing information
+- whether it belongs to Prototype, Teach, Campaign, Film/Visual AI, Learning UX, or Lab
+
+PHASE 2: PROJECT PRIORITIZATION
+
+Create a file called:
+
+/docs/PROJECT_PRIORITY_MATRIX.md
+
+Rank all projects into:
+
+Tier 1: Homepage flagship case studies
+Tier 2: Supporting case studies
+Tier 3: Lab/archive/smaller experiments
+Tier 4: Keep in source material but do not show prominently
+
+Use this priority logic:
+
+Tier 1 should probably include:
+- CTRL+ALT+DEITY.EXE
+- Fractal Breaths
+- GenAI Bootcamp
+- HIKE Knowledge Hub / #hikemussbleiben / campaign storytelling
+- GIZ Learning UX / innovation communication
+
+But inspect the uploaded material before finalizing.
+
+For each project, explain:
+- why it belongs in that tier
+- which hiring audience it helps
+- what proof exists
+- what proof is missing
+- how strong it is as a portfolio case study
+
+PHASE 3: CANONICAL CASE-STUDY STRUCTURE
+
+Create a file called:
+
+/docs/CASE_STUDY_STRUCTURE.md
+
+Define one reusable case-study structure for the whole site:
+
+1. One-line thesis
+2. Context
+3. Problem / challenge
+4. My role
+5. Process
+6. Tools / workflow
+7. Output
+8. Result / proof
+9. What this demonstrates for employers
+10. Assets needed
+11. TODOs / missing proof
+
+Do not invent metrics.
+Do not invent clients.
+Do not invent outcomes.
+If something is missing, write TODO.
+
+PHASE 4: CONTENT EXTRACTION
+
+Create draft Markdown files for the strongest case studies in:
+
+/content/case-studies/
+
+Create one Markdown file per case study.
+
+Use this naming format:
+- ctrl-alt-deity.md
+- fractal-breaths.md
+- genai-bootcamp.md
+- hike-campaign-storytelling.md
+- giz-learning-ux.md
+
+Each file should contain:
+- title
+- category
+- hiring audience
+- summary
+- case-study sections
+- available proof/assets
+- missing proof/TODOs
+
+Important:
+Preserve useful details from the raw material.
+Do not compress everything into vague summaries.
+Do not delete nuance.
+But remove repetition and weak phrasing.
+
+PHASE 5: SITE INFORMATION ARCHITECTURE
+
+Create:
+
+/docs/SITE_MAP.md
+
+Define the final website structure:
+- Home
+- Work
+- Individual case studies
+- Lab
+- About
+- Contact
+
+For the homepage, propose:
+- hero message
+- featured projects
+- three tracks: Prototype / Teach / Campaign
+- credibility/proof section
+- selected tools/workflows
+- call to action
+
+PHASE 6: IMPLEMENTATION PLAN
+
+Create:
+
+/docs/IMPLEMENTATION_PLAN.md
+
+Explain:
+- what files should be created or changed
+- what components are needed
+- how project data should be stored
+- how case-study pages should be routed
+- how assets should be organized
+- what should be done first, second, third
+
+Only after these docs are created, show me a summary and ask me to review the content architecture.
+
+Do not start a major redesign yet.
+Do not overwrite uploaded source material.
+Do not delete raw files.
+Do not invent facts.
+Do not make generic AI portfolio copy.
