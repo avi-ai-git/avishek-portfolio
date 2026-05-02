@@ -236,6 +236,7 @@ export const projects: Project[] = [
     slug: 'groovebox-daw',
     category: 'Prototype',
     placeholder: true,
+    thumbnail: '/groovebox-preview.png',
     oneLiner:
       'An AI-powered digital audio workstation being built in the browser — combining step sequencing, generative audio, and real-time AI prompting.',
     context:
@@ -685,6 +686,7 @@ export const labExperiments: Project[] = [
     title: 'GrooveBox Magic',
     slug: 'groovebox-magic',
     category: 'Prototype',
+    thumbnail: '/groovebox-preview.png',
     oneLiner:
       'A browser-based 16-step music sequencer with a playable UI, timing engine, and sound synthesis — built with React and Web Audio API.',
     liveUrl: 'https://groovebox-magic.netlify.app/',
