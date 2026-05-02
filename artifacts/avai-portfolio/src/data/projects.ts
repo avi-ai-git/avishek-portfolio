@@ -277,6 +277,7 @@ export const projects: Project[] = [
     title: 'AI Interview Practice App',
     slug: 'ai-interview-app',
     category: 'Prototype',
+    thumbnail: '/ai-interview-preview.png',
     oneLiner:
       'A Python/Streamlit app that judges interview answers in real time using 5 prompt techniques — built as part of the Turing College AI Engineering program and code-reviewed by a Nord Security engineer.',
     liveUrl: 'https://ai-interview-practice-app-made-by-avi-ai.streamlit.app/',
