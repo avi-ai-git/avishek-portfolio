@@ -28,13 +28,18 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif leading-none tracking-tighter mb-4 text-foreground flex items-center">
-              <span>AV</span>
+            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif leading-none tracking-tighter mb-4 text-foreground">
+              AV
               <span
-                className="inline-block rounded-full bg-primary flex-shrink-0 mx-[0.04em]"
-                style={{ width: "0.13em", height: "0.13em", marginBottom: "0.22em" }}
+                className="inline-block rounded-full bg-primary"
+                style={{
+                  width: "0.12em",
+                  height: "0.12em",
+                  margin: "0 0.05em",
+                  verticalAlign: "0.28em",
+                }}
               />
-              <span>AI</span>
+              AI
             </h1>
             <p className="text-2xl md:text-4xl font-serif text-muted-foreground mb-4">
               Avishek Chatterjee
