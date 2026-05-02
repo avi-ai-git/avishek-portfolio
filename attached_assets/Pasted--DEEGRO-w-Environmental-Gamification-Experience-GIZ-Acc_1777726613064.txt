@@ -1,0 +1,58 @@
+**DEEGRO.w! — Environmental Gamification Experience**
+
+*GIZ Accelerator Programme 2023-24 | 1 of 6 teams selected from 25 | €10K funded*
+
+## Project Overview
+
+Designed and prototyped an **interactive gamification experience** that translates complex environmental systems into engaging gameplay, winning the Audience Choice Award for innovation and user impact.
+
+**The Challenge:** Create an engaging tool to raise environmental awareness and motivate behavioral change around climate issues.
+
+**The Solution:** A role-playing game where players manage resources, make decisions with real consequences, and see the direct impact of their choices on ecosystem health.
+
+## Rapid Prototyping Process
+
+**LoFi → MidFi → HiFi Development (6 months)**
+
+- Started with board game concept for quick user testing
+- Iterated based on co-creation sessions and contextual feedback
+- Scaled to mobile game design with enhanced interactivity
+- Developed multiple user flows and ending scenarios
+
+## Key Skills Applied
+
+**UI/UX Design**
+
+- User journey mapping for multiple player roles
+- Interactive feedback systems (resource meters, event notifications)
+- Visual storytelling through game interface
+- Accessibility considerations for rural communities
+
+**Prototyping & Iteration**
+
+- Rapid concept-to-prototype pipeline
+- User testing and feedback integration
+- Cross-platform thinking (physical → digital)
+- Modular design for scalability
+
+**Innovation & Experimentation**
+
+- Gamification mechanics for behavior change
+- Data visualization (results grid for group discussion)
+- Multi-role system design (Mayor, Ambassador, CEO, Contractor)
+- Translating complex systems into intuitive interactions
+
+## Impact
+
+- Won competitive public vote (Audience Choice Award)
+- Advanced through 3-phase accelerator program
+- Pitched to expert jury and secured advancement pathway
+- Designed for scalable deployment across African communities
+
+### Outcomes
+
+[Degrow_Mobile Game Design.pdf](attachment:b5c94107-44e1-4d15-b86c-586f410ee24b:Degrow_Mobile_Game_Design.pdf)
+
+[Certificate_GIZ Innovation Fund Accelerator Programme.pdf](attachment:11500ab6-57a2-4af8-9e75-701b7725d59e:Certificate_GIZ_Innovation_Fund_Accelerator_Programme.pdf)
+
+[Project Description and GIZ Audience Choice Award Winner.pdf](attachment:91669832-bd0f-488e-bbac-5258cf0d7b5d:Project_Description_and_GIZ_Audience_Choice_Award_Winner.pdf)

@@ -4,13 +4,25 @@ import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 
+// Manually curated featured projects for homepage
+const FEATURED_SLUGS = [
+  "ctrl-alt-deity",
+  "fractal-breaths",
+  "hikemussbleiben",
+  "ai-bootcamp",
+];
+
 export default function Home() {
+  const featuredProjects = FEATURED_SLUGS
+    .map((slug) => projects.find((p) => p.slug === slug))
+    .filter(Boolean) as typeof projects;
+
   return (
     <AppLayout>
       {/* 1. Hero */}
       <section className="min-h-[100dvh] theme-terminal bg-background flex flex-col justify-center pt-20 px-6 relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -18,26 +30,38 @@ export default function Home() {
           >
             <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif leading-none tracking-tighter mb-4 text-foreground flex items-center">
               <span>AV</span>
-              <span className="inline-block rounded-full bg-primary flex-shrink-0 mx-[0.04em]" style={{ width: "0.13em", height: "0.13em" }}></span>
+              <span
+                className="inline-block rounded-full bg-primary flex-shrink-0 mx-[0.04em]"
+                style={{ width: "0.13em", height: "0.13em" }}
+              />
               <span>AI</span>
             </h1>
-            <p className="text-2xl md:text-4xl font-serif text-muted-foreground mb-4">Avishek Chatterjee</p>
-            <p className="font-mono text-primary text-sm md:text-base tracking-widest uppercase mb-12 flex items-center">
-              AI Creative Technologist · Berlin <span className="inline-block w-3 h-5 bg-primary ml-2 cursor-blink"></span>
+            <p className="text-2xl md:text-4xl font-serif text-muted-foreground mb-4">
+              Avishek Chatterjee
             </p>
-            
+            <p className="font-mono text-primary text-sm md:text-base tracking-widest uppercase mb-12 flex items-center">
+              AI Creative Technologist · Berlin{" "}
+              <span className="inline-block w-3 h-5 bg-primary ml-2 cursor-blink" />
+            </p>
+
             <div className="font-mono text-sm md:text-base text-muted-foreground space-y-2 mb-12 border-l border-border pl-4">
               <p>&gt; AI FILMMAKING</p>
               <p>&gt; GENAI WORKSHOPS</p>
-              <p>&gt; CONTENT SYSTEMS</p>
+              <p>&gt; CAMPAIGN STORYTELLING</p>
               <p>&gt; VISUAL PROTOTYPES</p>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 font-mono">
-              <Link href="/work" className="bg-primary text-primary-foreground px-8 py-3 hover:bg-primary/90 transition-colors text-center">
+              <Link
+                href="/work"
+                className="bg-primary text-primary-foreground px-8 py-3 hover:bg-primary/90 transition-colors text-center"
+              >
                 View Work
               </Link>
-              <a href="#contact" className="border border-border text-foreground px-8 py-3 hover:border-primary hover:text-primary transition-colors text-center">
+              <a
+                href="#contact"
+                className="border border-border text-foreground px-8 py-3 hover:border-primary hover:text-primary transition-colors text-center"
+              >
                 Contact
               </a>
             </div>
@@ -48,37 +72,41 @@ export default function Home() {
       {/* 2. Positioning statement */}
       <section className="py-24 md:py-32 px-6 bg-card">
         <div className="container mx-auto max-w-4xl text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             className="text-3xl md:text-5xl font-serif leading-tight text-foreground"
           >
-            I help teams turn emerging AI tools into practical prototypes, learning formats, campaigns, and creative workflows.
+            I build, teach, and communicate AI through prototypes, campaigns,
+            learning systems, and creative workflows.
           </motion.h2>
         </div>
       </section>
 
       {/* 3. Three Track cards */}
-      <section className="py-24 px-6 bg-background">
+      <section className="py-24 px-6 bg-background border-t border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TrackCard 
-              title="Prototype" 
-              description="Interactive experiments, browser-based tools, AI-assisted front-end workflows, visual systems."
-              projects={["Fractal Breaths", "GrooveBox Magic", "AI Prototyping Lab"]}
+            <TrackCard
+              title="Prototype"
+              description="Interactive experiments, browser-based tools, AI-assisted front-end workflows, visual and audio systems."
+              projects={["Fractal Breaths", "Far Out", "Sounds of Bengal", "GrooveBox DAW"]}
+              href="/work?filter=Prototype"
               delay={0.1}
             />
-            <TrackCard 
-              title="Teach" 
-              description="GenAI bootcamps, workshops, learning formats, curriculum, certificates, enablement."
-              projects={["GenAI Bootcamp", "AI Tool of the Month", "Prompt Engineering"]}
+            <TrackCard
+              title="Teach"
+              description="GenAI bootcamps, workshops, AI education sessions, enablement formats, curriculum, and certificates."
+              projects={["NotebookLM Session", "Vibe Coding", "AI Music Production", "AI Bootcamp"]}
+              href="/work?filter=Teach"
               delay={0.2}
             />
-            <TrackCard 
-              title="Campaign" 
-              description="Campaign storytelling, founder videos, knowledge hubs, newsletters, multi-channel assets."
-              projects={["HIKE Demo Day 2025", "#hikemussbleiben", "GIZ Learning UX"]}
+            <TrackCard
+              title="Campaign"
+              description="Campaign storytelling, advocacy videos, event launches, multi-channel assets, and content systems."
+              projects={["#hikemussbleiben", "HIKE Demo Day 2025"]}
+              href="/work?filter=Campaign"
               delay={0.3}
             />
           </div>
@@ -89,34 +117,63 @@ export default function Home() {
       <section className="py-24 px-6 bg-card border-t border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="flex justify-between items-end mb-12">
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground">Featured Work</h2>
-            <Link href="/work" className="font-mono text-sm text-primary hover:underline hidden sm:block">View All Work &rarr;</Link>
+            <h2 className="text-4xl md:text-5xl font-serif text-foreground">
+              Featured Work
+            </h2>
+            <Link
+              href="/work"
+              className="font-mono text-sm text-primary hover:underline hidden sm:block"
+            >
+              View All Work &rarr;
+            </Link>
           </div>
-          
+
+          {/* 1 wide + 2 side by side + 1 wide layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.slice(0, 5).map((project, i) => (
-              <ProjectCard key={project.id} project={project} featured={i === 0} />
+            {featuredProjects.map((project, i) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                featured={i === 0 || i === 3}
+              />
             ))}
           </div>
-          
+
           <div className="mt-8 text-center sm:hidden">
-            <Link href="/work" className="font-mono text-sm text-primary hover:underline">View All Work &rarr;</Link>
+            <Link
+              href="/work"
+              className="font-mono text-sm text-primary hover:underline"
+            >
+              View All Work &rarr;
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* 6. Fractal Breaths Interactive Section */}
+      {/* 5. Fractal Breaths Interactive Section */}
       <section className="py-32 px-6 theme-terminal bg-[#050505] relative overflow-hidden flex flex-col items-center">
-        {/* Background Noise/Grid */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at center, #ff0000 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
-        
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at center, #ff0000 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+
         <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
           <div className="text-center mb-16">
-            <Badge className="bg-primary/20 text-primary hover:bg-primary/30 border-primary/30 mb-4 font-mono rounded-none">LIVE PROTOTYPE</Badge>
-            <h2 className="text-4xl md:text-5xl font-serif mb-4">Fractal Breaths</h2>
-            <p className="font-mono text-muted-foreground">Browser-based generative meditation visual engine</p>
+            <Badge className="bg-primary/20 text-primary hover:bg-primary/30 border-primary/30 mb-4 font-mono rounded-none">
+              LIVE PROTOTYPE
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-serif mb-4">
+              Fractal Breaths
+            </h2>
+            <p className="font-mono text-muted-foreground">
+              Browser-based generative meditation visual engine
+            </p>
           </div>
-          
+
           {/* Interactive Orb UI */}
           <div className="w-full max-w-3xl aspect-[16/9] border border-border/40 bg-black/50 backdrop-blur-sm p-6 flex flex-col justify-between relative">
             <div className="flex justify-between font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest z-10">
@@ -127,12 +184,15 @@ export default function Home() {
               </div>
               <div>Fullscreen / Projector Mode</div>
             </div>
-            
+
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border border-primary/30 bg-primary/10 shadow-[0_0_50px_rgba(255,0,0,0.2)] animate-breathe mix-blend-screen"></div>
-              <div className="absolute w-24 h-24 md:w-32 md:h-32 rounded-full border border-primary/50 bg-primary/20 animate-breathe" style={{ animationDelay: '-8s' }}></div>
+              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border border-primary/30 bg-primary/10 shadow-[0_0_50px_rgba(255,0,0,0.2)] animate-breathe mix-blend-screen" />
+              <div
+                className="absolute w-24 h-24 md:w-32 md:h-32 rounded-full border border-primary/50 bg-primary/20 animate-breathe"
+                style={{ animationDelay: "-8s" }}
+              />
             </div>
-            
+
             <div className="flex justify-between font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest z-10">
               <div className="flex gap-4">
                 <span>Deep Ocean</span>
@@ -146,59 +206,96 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
-          <div className="mt-12 text-center">
-            <Link href="/work/fractal-breaths" className="inline-block border border-border font-mono text-sm px-6 py-3 hover:border-primary hover:text-primary transition-colors">
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 items-center">
+            <a
+              href="https://fractal-breaths.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary text-white font-mono text-sm px-6 py-3 hover:bg-primary/90 transition-colors"
+            >
+              Try it Live
+            </a>
+            <Link
+              href="/work/fractal-breaths"
+              className="inline-block border border-border font-mono text-sm px-6 py-3 hover:border-primary hover:text-primary transition-colors"
+            >
               Read Case Study
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 5. Capabilities block */}
+      {/* 6. Capabilities block */}
       <section className="py-24 px-6 bg-card border-t border-border">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-16">Capabilities</h2>
+          <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-16">
+            Capabilities
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-            <CapabilityItem 
-              title="AI Creative Workflows" 
-              description="I design repeatable workflows across text, image, video, sound, and interactive prototypes."
+            <CapabilityItem
+              title="AI Creative Workflows"
+              description="I design repeatable workflows across text, image, video, sound, and interactive prototypes — from concept to shipped output."
             />
-            <CapabilityItem 
-              title="Visual Storytelling" 
-              description="I turn complex ideas into clear films, campaigns, explainers, and visual systems."
+            <CapabilityItem
+              title="Visual Storytelling & Campaigns"
+              description="I turn complex ideas into clear films, advocacy campaigns, event launches, and content systems built to distribute."
             />
-            <CapabilityItem 
-              title="Workshop & Learning Design" 
-              description="I design GenAI bootcamps, promptbooks, learning resources, and practical enablement formats."
+            <CapabilityItem
+              title="Workshop & Learning Design"
+              description="I design GenAI bootcamps, topic sessions, promptbooks, and practical enablement formats for mixed technical audiences."
             />
-            <CapabilityItem 
-              title="Content Systems & Knowledge Hubs" 
-              description="I build reusable systems for campaigns, newsletters, Notion hubs, founder stories, and team communication."
+            <CapabilityItem
+              title="UX, Sound Design & Research"
+              description="I bring UX research, interaction design, gamification, and spatial audio production into human-centred experiences."
             />
           </div>
         </div>
       </section>
 
-      {/* 7. Proof cards */}
+      {/* 7. Proof strip */}
       <section className="py-16 px-6 bg-foreground text-background">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <ProofItem text="AI short film selected for Artefact AI Film Festival Paris 2025" />
             <ProofItem text="GenAI Bootcamp designed and delivered for 50+ participants" />
-            <ProofItem text="GIZ LMS redesign improved engagement by ~30%" />
-            <ProofItem text="Communications systems built across campaigns, events, video, and Notion" />
+            <ProofItem text="GIZ Innovation Fund — Audience Choice Award from 100+ international teams" />
+            <ProofItem text="HIKE communications: 1,000+ LinkedIn followers, full multi-channel campaign systems" />
           </div>
         </div>
       </section>
 
-      {/* 8. Selected Tools & Workflows */}
+      {/* 8. Selected Tools */}
       <section className="py-24 px-6 bg-background">
         <div className="container mx-auto max-w-6xl text-center">
-          <h3 className="font-mono text-sm text-muted-foreground uppercase tracking-widest mb-8">Selected Tools & Stack</h3>
+          <h3 className="font-mono text-sm text-muted-foreground uppercase tracking-widest mb-8">
+            Selected Tools & Stack
+          </h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {["Midjourney", "Runway", "ElevenLabs", "Claude", "ChatGPT", "Gemini", "NotebookLM", "Suno AI", "ComfyUI", "React", "Web Audio API", "Cursor", "Replit", "n8n", "Canva", "CapCut", "Notion", "Adobe CC"].map(tool => (
-              <span key={tool} className="px-4 py-2 border border-border text-sm font-mono text-foreground hover:border-primary hover:text-primary transition-colors cursor-default">
+            {[
+              "Midjourney",
+              "Runway",
+              "ElevenLabs",
+              "Claude",
+              "ChatGPT",
+              "Gemini",
+              "NotebookLM",
+              "Suno AI",
+              "MusicFX",
+              "React",
+              "Web Audio API",
+              "Cursor",
+              "Replit",
+              "Figma",
+              "Canva",
+              "CapCut",
+              "Notion",
+              "Adobe CC",
+            ].map((tool) => (
+              <span
+                key={tool}
+                className="px-4 py-2 border border-border text-sm font-mono text-foreground hover:border-primary hover:text-primary transition-colors cursor-default"
+              >
                 {tool}
               </span>
             ))}
@@ -207,40 +304,92 @@ export default function Home() {
       </section>
 
       {/* 9. Contact section */}
-      <section id="contact" className="py-32 px-6 theme-terminal bg-[#080808] border-t border-border/20">
+      <section
+        id="contact"
+        className="py-32 px-6 theme-terminal bg-[#080808] border-t border-border/20"
+      >
         <div className="container mx-auto max-w-4xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-4xl font-serif text-white mb-6">Let's Build Something.</h2>
+              <h2 className="text-4xl font-serif text-white mb-6">
+                Let's Build Something.
+              </h2>
               <p className="text-xl font-serif text-muted-foreground mb-8">
-                Available for creative technologist, AI marketing, AI enablement, and AI prototyping roles.
+                Available for creative technologist, AI marketing, AI
+                enablement, and AI prototyping roles.
               </p>
-              
+
               <div className="space-y-4 font-mono text-sm">
                 <div>
-                  <span className="block text-muted-foreground mb-1">Email</span>
-                  <a href="mailto:avishek.chatterjee@aol.com" className="text-primary hover:underline text-lg">avishek.chatterjee@aol.com</a>
+                  <span className="block text-muted-foreground mb-1">
+                    Email
+                  </span>
+                  <a
+                    href="mailto:avishek.chatterjee@aol.com"
+                    className="text-primary hover:underline text-lg"
+                  >
+                    avishek.chatterjee@aol.com
+                  </a>
                 </div>
                 <div>
-                  <span className="block text-muted-foreground mb-1">LinkedIn</span>
-                  <a href="https://linkedin.com/in/avishek-chatterjee" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">linkedin.com/in/avishek-chatterjee</a>
+                  <span className="block text-muted-foreground mb-1">
+                    LinkedIn
+                  </span>
+                  <a
+                    href="https://linkedin.com/in/avishek-chatterjee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-primary transition-colors"
+                  >
+                    linkedin.com/in/avishek-chatterjee
+                  </a>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white/5 p-6 border border-white/10">
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form
+                className="space-y-4"
+                onSubmit={(e) => e.preventDefault()}
+              >
                 <div>
-                  <label htmlFor="name" className="block font-mono text-xs text-muted-foreground mb-2">NAME</label>
-                  <input type="text" id="name" className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans" />
+                  <label
+                    htmlFor="name"
+                    className="block font-mono text-xs text-muted-foreground mb-2"
+                  >
+                    NAME
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans"
+                  />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block font-mono text-xs text-muted-foreground mb-2">EMAIL</label>
-                  <input type="email" id="email" className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans" />
+                  <label
+                    htmlFor="email"
+                    className="block font-mono text-xs text-muted-foreground mb-2"
+                  >
+                    EMAIL
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans"
+                  />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block font-mono text-xs text-muted-foreground mb-2">MESSAGE</label>
-                  <textarea id="message" rows={4} className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans resize-none"></textarea>
+                  <label
+                    htmlFor="message"
+                    className="block font-mono text-xs text-muted-foreground mb-2"
+                  >
+                    MESSAGE
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans resize-none"
+                  />
                 </div>
                 <button className="w-full bg-white text-black font-mono py-3 hover:bg-primary hover:text-white transition-colors mt-4">
                   SEND INQUIRY
@@ -254,9 +403,20 @@ export default function Home() {
   );
 }
 
-function TrackCard({ title, description, projects, delay }: { title: string, description: string, projects: string[], delay: number }) {
+function TrackCard({
+  title,
+  description,
+  projects: projectList,
+  delay,
+}: {
+  title: string;
+  description: string;
+  projects: string[];
+  href: string;
+  delay: number;
+}) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -264,15 +424,22 @@ function TrackCard({ title, description, projects, delay }: { title: string, des
       className="p-8 border border-border bg-card hover:border-primary/50 transition-colors h-full flex flex-col"
     >
       <h3 className="text-2xl font-serif mb-4 flex items-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-primary inline-block"></span>
+        <span className="w-2 h-2 rounded-full bg-primary inline-block" />
         {title}
       </h3>
-      <p className="text-muted-foreground mb-8 flex-1 leading-relaxed">{description}</p>
+      <p className="text-muted-foreground mb-8 flex-1 leading-relaxed">
+        {description}
+      </p>
       <div>
-        <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-3">Sample Projects</p>
+        <p className="font-mono text-xs text-muted-foreground uppercase tracking-wider mb-3">
+          Projects
+        </p>
         <div className="flex flex-wrap gap-2">
-          {projects.map(p => (
-            <span key={p} className="text-xs font-mono bg-background border border-border px-2 py-1 text-foreground">
+          {projectList.map((p) => (
+            <span
+              key={p}
+              className="text-xs font-mono bg-background border border-border px-2 py-1 text-foreground"
+            >
               {p}
             </span>
           ))}
@@ -282,11 +449,24 @@ function TrackCard({ title, description, projects, delay }: { title: string, des
   );
 }
 
-function ProjectCard({ project, featured = false }: { project: any, featured?: boolean }) {
+function ProjectCard({
+  project,
+  featured = false,
+}: {
+  project: (typeof projects)[number];
+  featured?: boolean;
+}) {
   return (
-    <Link href={`/work/${project.slug}`} className={`group block ${featured ? 'md:col-span-2' : ''}`}>
-      <div className="border border-border bg-background overflow-hidden hover:border-primary/50 transition-colors">
-        <div className={`w-full bg-muted relative overflow-hidden ${featured ? 'aspect-[21/9]' : 'aspect-video'}`}>
+    <Link
+      href={`/work/${project.slug}`}
+      className={`group block ${featured ? "md:col-span-2" : ""}`}
+    >
+      <div className="border border-border bg-background overflow-hidden hover:border-primary/50 transition-colors h-full">
+        <div
+          className={`w-full bg-muted relative overflow-hidden ${
+            featured ? "aspect-[21/9]" : "aspect-video"
+          }`}
+        >
           {project.thumbnail ? (
             <img
               src={project.thumbnail}
@@ -294,17 +474,26 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           ) : (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-mono text-muted-foreground/50 tracking-widest uppercase text-xs">IMAGE_ASSET</span>
+            <div className="absolute inset-0 flex items-center justify-center bg-card">
+              <span className="font-mono text-muted-foreground/50 tracking-widest uppercase text-xs">
+                {project.placeholder ? "IN DEVELOPMENT" : "IMAGE_ASSET"}
+              </span>
             </div>
           )}
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
         </div>
         <div className="p-6 md:p-8">
-          <Badge variant="outline" className="mb-4 rounded-none font-mono font-normal text-xs text-primary border-primary/30">
+          <Badge
+            variant="outline"
+            className="mb-4 rounded-none font-mono font-normal text-xs text-primary border-primary/30"
+          >
             {project.category}
           </Badge>
-          <h3 className={`${featured ? 'text-3xl md:text-4xl' : 'text-2xl'} font-serif mb-3 group-hover:text-primary transition-colors`}>
+          <h3
+            className={`${
+              featured ? "text-3xl md:text-4xl" : "text-2xl"
+            } font-serif mb-3 group-hover:text-primary transition-colors`}
+          >
             {project.title}
           </h3>
           <p className="text-muted-foreground leading-relaxed">
@@ -316,7 +505,13 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
   );
 }
 
-function CapabilityItem({ title, description }: { title: string, description: string }) {
+function CapabilityItem({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="border-l border-primary pl-6 py-2">
       <h4 className="text-xl font-serif mb-3">{title}</h4>
@@ -329,8 +524,17 @@ function ProofItem({ text }: { text: string }) {
   return (
     <div className="flex flex-col gap-4 py-4 border-t border-background/20 sm:border-t-0 sm:border-l sm:pl-6">
       <div className="text-primary">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinelinejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="20 6 9 17 4 12" />
         </svg>
       </div>
       <p className="font-serif leading-snug">{text}</p>
