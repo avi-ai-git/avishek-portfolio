@@ -286,12 +286,19 @@ function ProjectCard({ project, featured = false }: { project: any, featured?: b
   return (
     <Link href={`/work/${project.slug}`} className={`group block ${featured ? 'md:col-span-2' : ''}`}>
       <div className="border border-border bg-background overflow-hidden hover:border-primary/50 transition-colors">
-        <div className={`w-full bg-muted relative ${featured ? 'aspect-[21/9]' : 'aspect-video'}`}>
-          {/* Placeholder for real images */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-mono text-muted-foreground/50 tracking-widest uppercase">IMAGE_ASSET</span>
-          </div>
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+        <div className={`w-full bg-muted relative overflow-hidden ${featured ? 'aspect-[21/9]' : 'aspect-video'}`}>
+          {project.thumbnail ? (
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="font-mono text-muted-foreground/50 tracking-widest uppercase text-xs">IMAGE_ASSET</span>
+            </div>
+          )}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
         </div>
         <div className="p-6 md:p-8">
           <Badge variant="outline" className="mb-4 rounded-none font-mono font-normal text-xs text-primary border-primary/30">

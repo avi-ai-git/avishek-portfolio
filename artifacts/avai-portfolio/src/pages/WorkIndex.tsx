@@ -52,10 +52,19 @@ export default function WorkIndex() {
                 transition={{ delay: i * 0.1 }}
               >
                 <Link href={`/work/${project.slug}`} className="group flex flex-col h-full border border-border hover:border-primary/50 transition-colors">
-                  <div className="aspect-video w-full bg-muted relative">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="font-mono text-xs text-muted-foreground/50 tracking-widest uppercase">IMAGE</span>
-                    </div>
+                  <div className="aspect-video w-full bg-muted relative overflow-hidden">
+                    {project.thumbnail ? (
+                      <img
+                        src={project.thumbnail}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="font-mono text-xs text-muted-foreground/50 tracking-widest uppercase">IMAGE</span>
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <Badge variant="outline" className="mb-4 self-start rounded-none font-mono font-normal text-[10px] text-primary border-primary/30">
