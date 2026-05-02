@@ -4,9 +4,9 @@ export function Footer() {
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <div>
-            <div className="font-mono text-2xl tracking-tight flex items-baseline mb-2">
+            <div className="font-mono text-2xl tracking-tight flex items-center mb-2">
               <span>AV</span>
-              <span className="text-primary mx-[1px]">.</span>
+              <span className="inline-block rounded-full bg-primary flex-shrink-0 mx-[3px]" style={{ width: "6px", height: "6px" }}></span>
               <span>AI</span>
             </div>
             <p className="text-muted-foreground font-mono text-sm">Building, Teaching, Communicating AI.</p>

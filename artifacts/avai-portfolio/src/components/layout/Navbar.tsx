@@ -35,9 +35,9 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-6 max-w-6xl flex items-center justify-between">
-        <Link href="/" className="font-mono text-xl tracking-tight z-50 group flex items-baseline">
+        <Link href="/" className="font-mono text-xl tracking-tight z-50 group flex items-center">
           <span className="text-foreground group-hover:opacity-80 transition-opacity">AV</span>
-          <span className="text-primary mx-[1px]">.</span>
+          <span className="inline-block rounded-full bg-primary flex-shrink-0 mx-[3px]" style={{ width: "5px", height: "5px" }}></span>
           <span className="text-foreground group-hover:opacity-80 transition-opacity">AI</span>
         </Link>
 

@@ -16,8 +16,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl"
           >
-            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif leading-none tracking-tighter mb-4 text-foreground">
-              AV<span className="text-primary">.</span>AI
+            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif leading-none tracking-tighter mb-4 text-foreground flex items-center">
+              <span>AV</span>
+              <span className="inline-block rounded-full bg-primary flex-shrink-0 mx-[0.04em]" style={{ width: "0.13em", height: "0.13em" }}></span>
+              <span>AI</span>
             </h1>
             <p className="text-2xl md:text-4xl font-serif text-muted-foreground mb-4">Avishek Chatterjee</p>
             <p className="font-mono text-primary text-sm md:text-base tracking-widest uppercase mb-12 flex items-center">
