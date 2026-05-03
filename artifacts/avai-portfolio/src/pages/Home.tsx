@@ -3,6 +3,7 @@ import { AppLayout } from "@/components/layout/AppLayout";
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 // Manually curated featured projects for homepage
 const FEATURED_SLUGS = [
@@ -313,55 +314,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white/5 p-6 border border-white/10">
-              <form
-                className="space-y-4"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block font-mono text-xs text-muted-foreground mb-2"
-                  >
-                    NAME
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block font-mono text-xs text-muted-foreground mb-2"
-                  >
-                    EMAIL
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block font-mono text-xs text-muted-foreground mb-2"
-                  >
-                    MESSAGE
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans resize-none"
-                  />
-                </div>
-                <button className="w-full bg-white text-black font-mono py-3 hover:bg-primary hover:text-white transition-colors mt-4">
-                  SEND INQUIRY
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
@@ -482,6 +435,109 @@ function CapabilityItem({
     <div className="border-l border-primary pl-6 py-2">
       <h4 className="text-xl font-serif mb-3">{title}</h4>
       <p className="text-muted-foreground leading-relaxed">{description}</p>
+    </div>
+  );
+}
+
+function ContactForm() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+      const data = await res.json() as { success?: boolean; error?: string };
+      if (!res.ok) throw new Error(data.error ?? "Something went wrong.");
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err instanceof Error ? err.message : "Something went wrong.");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <div className="bg-white/5 p-6 border border-white/10 flex flex-col items-start justify-center min-h-[280px]">
+        <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mb-4">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+        </div>
+        <h3 className="font-serif text-white text-xl mb-2">Message sent.</h3>
+        <p className="font-mono text-sm text-muted-foreground mb-6">I'll be in touch soon.</p>
+        <button
+          onClick={() => setStatus("idle")}
+          className="font-mono text-xs text-primary hover:underline tracking-widest uppercase"
+        >
+          Send another
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-white/5 p-6 border border-white/10">
+      <form className="space-y-4" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name" className="block font-mono text-xs text-muted-foreground mb-2">NAME</label>
+          <input
+            type="text"
+            id="name"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            disabled={status === "loading"}
+            className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans disabled:opacity-50"
+          />
+        </div>
+        <div>
+          <label htmlFor="email" className="block font-mono text-xs text-muted-foreground mb-2">EMAIL</label>
+          <input
+            type="email"
+            id="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            disabled={status === "loading"}
+            className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans disabled:opacity-50"
+          />
+        </div>
+        <div>
+          <label htmlFor="message" className="block font-mono text-xs text-muted-foreground mb-2">MESSAGE</label>
+          <textarea
+            id="message"
+            rows={4}
+            required
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            disabled={status === "loading"}
+            className="w-full bg-transparent border-b border-white/20 px-0 py-2 text-white focus:outline-none focus:border-primary font-sans resize-none disabled:opacity-50"
+          />
+        </div>
+        {status === "error" && (
+          <p className="font-mono text-xs text-red-400">{errorMsg}</p>
+        )}
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="w-full bg-white text-black font-mono py-3 hover:bg-primary hover:text-white transition-colors mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {status === "loading" ? "SENDING..." : "SEND INQUIRY"}
+        </button>
+      </form>
     </div>
   );
 }
