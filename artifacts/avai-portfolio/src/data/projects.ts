@@ -56,9 +56,9 @@ export const projects: Project[] = [
     youtubeId: 'YzSH_73PjT0',
     link: 'https://artefact-ai-film-festival.com/gallery/ctrl-alt-deity-exe-69307062ca68f',
     context:
-      'I wanted to tell a human story about grief through a near-future AI lens. I treated GenAI as a production partner, not a gimmick and not a shortcut. Every visual, every voice, every sound was planned as part of a coherent creative vision before generation began.',
+      'An independent sci-fi short film written, directed, and produced using Generative AI as a creative partner at every stage. A grieving priest feeds the memory of his dead daughter into an AI god that promises to erase pain, until a forbidden cassette forces the system to remember. I created it alongside my work at HIKE to push myself beyond short social clips into a complete narrative film. Selected and showcased at the Artefact AI Film Festival as an example of end-to-end AI film production.',
     problem:
-      'How do you produce a visually consistent, emotionally coherent short film entirely through AI, when every generation run produces something slightly different? The challenge was not whether AI can make images but whether 100+ assets from different tools, on different days, can feel like one film.',
+      'How do you produce a visually consistent, emotionally coherent short film entirely through AI, when every generation run produces something slightly different? The challenge was not whether AI can make images but whether 100+ assets from different tools, on different days, can feel like one film with one story.',
     myRole: [
       'Writing and direction',
       'Visual development and prompt design',
@@ -332,8 +332,12 @@ export const projects: Project[] = [
       'A 90-minute live session teaching founders and practitioners how to use NotebookLM for AI-powered research, knowledge synthesis, and learning, delivered at HIKE Nordhausen.',
     thumbnail: ytThumb('nbsrds0E9Uc'),
     youtubeId: 'nbsrds0E9Uc',
+    videos: [
+      { label: 'Full Session Recording', youtubeId: 'nbsrds0E9Uc' },
+      { label: 'AI Podcast Recap in German', youtubeId: 'oL8dOsCy7hM', isShort: true },
+    ],
     context:
-      'Session 1 of the HIKE GenAI program. NotebookLM represents a shift in how people can interact with large bodies of knowledge, but most practitioners were using it like a search engine. This session reframed it as a research and synthesis tool.',
+      'Session 1 of the HIKE GenAI program. NotebookLM represents a shift in how people can interact with large bodies of knowledge, but most practitioners were using it like a search engine. This session reframed it as a research and synthesis tool. After the session I produced an AI-generated podcast recap in German using NotebookLM itself as a demonstration of the tool in action.',
     problem:
       'How do you teach a room of mixed-technical practitioners to genuinely change how they process information, in 90 minutes, with zero setup, and with something they can use the next morning?',
     myRole: [
@@ -500,38 +504,44 @@ export const projects: Project[] = [
     slug: 'ai-tool-month',
     category: 'Teach',
     oneLiner:
-      'A recurring series exploring one AI tool per month with practical use cases, honest limitations, and real examples from the HIKE community.',
+      'An ongoing series at HIKE exploring one AI tool per month through real use cases, honest limitations, and short-form video, distributed to the startup and educator community.',
     thumbnail: ytThumb('0K9y2c2IRsU'),
+    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7402316941920727040',
     context:
-      'AI tools move fast. Most write-ups are either pure marketing or too technical to act on. AI Tool of the Month is a recurring format built for practitioners, picking one tool, showing what it actually does, and being honest about where it falls short.',
+      'AI tools move fast. Most write-ups are pure marketing or too technical to act on. AI Tool of the Month is a recurring format built for practitioners at HIKE, picking one tool, testing it against real use cases from marketing, content production, and startup workflows, and being honest about where it falls short. Published as internal documentation, social posts, and live demos.',
     problem:
-      'How do you help a community of founders, marketers, and practitioners stay on top of AI tools without overwhelming them, and without just showing the glossy version?',
+      'How do you help a community of founders, marketers, and practitioners stay current with AI tools without overwhelming them, and without just showing the glossy version?',
     myRole: [
-      'Tool selection and research',
-      'Practical use case design and testing',
-      'Short-form video production',
-      'Community distribution via HIKE channels',
+      'Tool selection and research each month',
+      'Practical use case design and testing against real HIKE workflows',
+      'Script and screen recording for short-form tutorial videos',
+      'AI voice clone for voiceover using ElevenLabs',
+      'Brand and content design for the Nano Banana December series',
+      'Distribution via HIKE LinkedIn, newsletter, and community channels',
     ],
     process: [
-      'Pick one tool per month that has crossed a practical usefulness threshold',
-      'Test it across real use cases relevant to the HIKE community',
-      'Produce a short-form video showing honest capability and limitations',
-      'Distribute via HIKE LinkedIn, newsletter, and community channels',
+      'Select one tool per month that has crossed a practical usefulness threshold for the community',
+      'Test it across real use cases including marketing, content production, and startup workflows',
+      'Write a short script focused on problem, solution, demo, and call to action',
+      'Record the workflow with screen capture and sync AI-generated voiceover',
+      'Add captions and motion for social distribution',
+      'Distribute via HIKE channels and document internally as reusable knowledge',
     ],
     tools: [
-      { category: 'Format', items: ['Short-form video', 'LinkedIn'] },
-      { category: 'Distribution', items: ['HIKE Community', 'Newsletter'] },
+      { category: 'Production', items: ['CapCut', 'Canva', 'Screen recording'] },
+      { category: 'AI Voice', items: ['ElevenLabs'] },
+      { category: 'LLMs', items: ['Claude', 'ChatGPT'] },
+      { category: 'Distribution', items: ['LinkedIn', 'HIKE Community'] },
     ],
     videos: [
-      { label: 'Episode 1', youtubeId: '0K9y2c2IRsU', isShort: true },
-      { label: 'Episode 2', youtubeId: 'oL8dOsCy7hM', isShort: true },
+      { label: 'Napkin AI Tutorial', youtubeId: '0K9y2c2IRsU', isShort: true },
     ],
     output:
-      'Monthly short-form video episodes distributed to the HIKE community. Practical, honest, and immediately applicable.',
+      'Monthly short-form video episodes and content posts. Napkin AI tutorial with AI voice clone. Nano Banana brand identity and December Prompt Drop Series. Internal documentation for reuse.',
     result:
-      'Ongoing series. Two episodes published. Part of the HIKE GenAI content ecosystem.',
+      'Ongoing series. Published across HIKE channels. The Nano Banana Prompt Drop Series was distributed as a December advent calendar of AI image prompts.',
     demonstrates:
-      'AI tool literacy, content production, community enablement, short-form video, editorial judgment.',
+      'AI tool literacy, short-form content production, editorial judgment, AI voice production, community enablement.',
     hiringAudience:
       'AI Enablement Lead · AI Educator · Content Strategist · GenAI Educator',
     tags: ['Content', 'Tool Scouting', 'Enablement', 'Short-form Video', 'Community'],
@@ -751,6 +761,18 @@ export const labExperiments: Project[] = [
     isLab: true,
   },
   {
+    id: 'self-portrait-avatar',
+    title: 'Self-Portrait Avatar Experiments',
+    slug: 'self-portrait-avatar',
+    category: 'Prototype',
+    oneLiner:
+      'Sketchbook experiments using my own face as test material to explore identity, style, consistency, and VFX transitions in AI image and video tools.',
+    tags: ['Higgsfield', 'AI Video', 'Identity', 'Character Consistency', 'VFX'],
+    isLab: true,
+    context:
+      'I use my own face as test material to explore identity, style, and transitions in AI video tools including Higgsfield. These are sketchbook-style pieces that feed into my workshops and visual storytelling work. Safe way to experiment with identity and emotion in AI images and video. Quick way to test new tools, styles, and transitions. Material for talks and demos about AI image and video generation.',
+  },
+  {
     id: 'prompt-eng-systems',
     title: 'Prompt Engineering Systems',
     slug: 'prompt-eng-systems',
@@ -762,12 +784,15 @@ export const labExperiments: Project[] = [
   },
   {
     id: 'nano-banana',
-    title: 'Nano Banana Prompt Drop',
+    title: 'Nano Banana Prompt Drop Series',
     slug: 'nano-banana',
     category: 'Campaign',
     oneLiner:
-      'Public thought-leadership prompt drops making concrete AI use cases tangible for the German-speaking generative AI community.',
-    tags: ['Social', 'Content', 'Prompting', 'Thought Leadership'],
+      'An advent calendar-style December series for HIKE. Every day a new theme, prompt, and AI-generated image to make prompt engineering tangible for the community.',
+    tags: ['Social', 'Content', 'Prompting', 'Advent Calendar', 'Nano Banana'],
     isLab: true,
+    context:
+      'Eight prompt templates published daily across the December series, covering adding text to existing images, object removal, 3D isometric models, infographic timelines, product scene creation, moodboards, product grids, and technical blueprints. Each prompt came with a real input and output example to make the technique immediately repeatable.',
+    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7402316941920727040',
   },
 ];

@@ -11,6 +11,7 @@ const TOUR_SEQUENCE = [
   { path: "/work/ai-bootcamp", label: "Teach" },
   { path: "/work/ai-tool-month", label: "AI Tool" },
   { path: "/lab", label: "Lab" },
+  { path: "/about", label: "About" },
 ];
 
 const SCROLL_PX_PER_FRAME = 1.5;
