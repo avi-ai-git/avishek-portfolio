@@ -168,7 +168,7 @@ export default function Home() {
                 Real-time AI Music Jam
               </h2>
               <p className="text-muted-foreground mt-3 font-mono text-sm max-w-lg">
-                Live prompt-based music control using MusicFX DJ Mode — AI as a
+                Live prompt-based music control using MusicFX DJ Mode. AI as a
                 creative instrument, not a generator.
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             <CapabilityItem
               title="AI Creative Workflows"
-              description="I design repeatable workflows across text, image, video, sound, and interactive prototypes — from concept to shipped output."
+              description="I design repeatable workflows across text, image, video, sound, and interactive prototypes, from concept to shipped output."
             />
             <CapabilityItem
               title="Visual Storytelling & Campaigns"
@@ -225,8 +225,8 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <ProofItem text="AI short film selected for Artefact AI Film Festival Paris 2025" />
             <ProofItem text="GenAI Bootcamp designed and delivered for 50+ participants" />
-            <ProofItem text="GIZ Innovation Fund — Audience Choice Award from 100+ international teams" />
-            <ProofItem text="HIKE communications: 1,000+ LinkedIn followers, full multi-channel campaign systems" />
+            <ProofItem text="GIZ Innovation Fund. Audience Choice Award from 100+ international teams" />
+            <ProofItem text="HIKE communications. 1,000+ LinkedIn followers, full multi-channel campaign systems" />
           </div>
         </div>
       </section>

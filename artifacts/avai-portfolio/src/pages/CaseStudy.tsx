@@ -214,32 +214,31 @@ export default function CaseStudy() {
                 </section>
               )}
 
-              {/* YouTube Short — vertical format */}
-              {project.youtubeShortId && (
-                <div className="my-4 flex flex-col items-center gap-4">
-                  <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest self-start">
-                    Quick Look
-                  </p>
-                  <div className="relative w-full max-w-xs aspect-[9/16] bg-black">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${project.youtubeShortId}`}
-                      title="Quick look"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full border-0"
-                    />
-                  </div>
-                </div>
-              )}
-
-              {/* Multi-video grid */}
+              {/* Multi-video grid — handles both landscape and portrait Shorts */}
               {project.videos && project.videos.length > 0 && (
                 <section>
-                  <h3 className="text-2xl font-serif text-foreground mb-8">Sessions & Artifacts</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {project.videos.map((v) => (
-                      <YouTubeEmbed key={v.youtubeId} id={v.youtubeId} label={v.label} />
-                    ))}
+                  <h3 className="text-2xl font-serif text-foreground mb-8">Episodes</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+                    {project.videos.map((v) =>
+                      v.isShort ? (
+                        <div key={v.youtubeId} className="flex flex-col items-center">
+                          <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-3 self-start">
+                            {v.label}
+                          </p>
+                          <div className="relative w-full max-w-[260px] aspect-[9/16] bg-black mx-auto">
+                            <iframe
+                              src={`https://www.youtube.com/embed/${v.youtubeId}`}
+                              title={v.label}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                              className="absolute inset-0 w-full h-full border-0"
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        <YouTubeEmbed key={v.youtubeId} id={v.youtubeId} label={v.label} />
+                      )
+                    )}
                   </div>
                 </section>
               )}
