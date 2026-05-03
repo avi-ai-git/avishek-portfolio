@@ -1,5 +1,6 @@
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
+import { DemoTour } from "./DemoTour";
 import { ReactNode } from "react";
 
 interface AppLayoutProps {
@@ -14,6 +15,7 @@ export function AppLayout({ children }: AppLayoutProps) {
         {children}
       </main>
       <Footer />
+      <DemoTour />
     </div>
   );
 }
