@@ -18,6 +18,7 @@ export interface Project {
   oneLiner: string;
   thumbnail?: string;
   youtubeId?: string;
+  youtubeShortId?: string;
   liveUrl?: string;
   link?: string;
   context?: string;
@@ -105,6 +106,7 @@ export const projects: Project[] = [
       "A browser-based generative meditation engine — built in hours using AI-assisted coding — that responds to the user's own breathing rhythm.",
     thumbnail: ytThumb('JMQZOoShScQ'),
     youtubeId: 'JMQZOoShScQ',
+    youtubeShortId: '0K9y2c2IRsU',
     liveUrl: 'https://fractal-breaths.netlify.app/',
     context:
       'Fractal Breaths explores two things at once: embodied interface design (can a browser genuinely support breathing practice?) and AI-assisted development (how fast can a concept become a working prototype with AI coding tools?).',

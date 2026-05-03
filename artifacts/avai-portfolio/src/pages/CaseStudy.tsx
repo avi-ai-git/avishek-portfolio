@@ -214,16 +214,20 @@ export default function CaseStudy() {
                 </section>
               )}
 
-              {/* Fractal Breaths live orb demo */}
-              {project.slug === "fractal-breaths" && (
-                <div className="my-4 p-8 bg-[#050505] border border-border/20 flex flex-col items-center">
-                  <p className="font-mono text-primary text-xs tracking-widest mb-8">LIVE PREVIEW</p>
-                  <div className="w-48 h-48 rounded-full border border-primary/30 bg-primary/10 shadow-[0_0_60px_rgba(220,38,38,0.2)] animate-breathe mb-8" />
-                  <div className="flex gap-6 font-mono text-[11px] text-muted-foreground">
-                    <span>Inhale</span>
-                    <span>Hold</span>
-                    <span>Exhale</span>
-                    <span>Rest</span>
+              {/* YouTube Short — vertical format */}
+              {project.youtubeShortId && (
+                <div className="my-4 flex flex-col items-center gap-4">
+                  <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest self-start">
+                    Quick Look
+                  </p>
+                  <div className="relative w-full max-w-xs aspect-[9/16] bg-black">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${project.youtubeShortId}`}
+                      title="Quick look"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full border-0"
+                    />
                   </div>
                 </div>
               )}
