@@ -148,10 +148,10 @@ export const projects: Project[] = [
     category: 'Prototype',
     thumbnail: '/farout-preview.png',
     oneLiner:
-      'A cinematic browser experience built around the aesthetics of deep space — dark, atmospheric, and vibe-coded from concept to deployment.',
+      'A cinematic browser experience built around the aesthetics of deep space — vibe-coded with Replit and entered in the Replit Buildathon.',
     liveUrl: 'https://farout.netlify.app/',
     context:
-      'Far Out is a rapid creative prototype exploring what it feels like to be at the edge of known space. The brief was purely aesthetic: build something that feels cinematic, mysterious, and intentional — using AI-assisted tools to go from idea to shipped experience as fast as possible.',
+      'Far Out is a creative prototype and Replit Buildathon entry exploring what it feels like to be at the edge of known space. Built entirely with Replit — AI-assisted, deployed fast, and designed to feel cinematic rather than technical.',
     problem:
       'Can a browser experience feel genuinely cinematic — not just visually dark, but tonally coherent — when built without a traditional design or development team, using only AI-assisted tools and a clear creative direction?',
     myRole: [
@@ -454,7 +454,7 @@ export const projects: Project[] = [
     slug: 'ai-bootcamp',
     category: 'Teach',
     oneLiner:
-      'Designed and facilitated a 2-day intensive GenAI bootcamp for HIKE — covering research, coding, content, and creative AI workflows, with certificates and real project outputs.',
+      'Designed and delivered 3 GenAI sessions (NotebookLM, Vibe Coding, AI Music) plus a 2-day bootcamp for HIKE — 50+ participants, certificates, and reusable learning systems.',
     thumbnail: ytThumb('nbsrds0E9Uc'),
     context:
       'The HIKE GenAI Bootcamp followed the three topic sessions and went deeper — two full days of guided practice, individual and team projects, and structured output. Designed for a mixed audience of founders, students, and practitioners.',

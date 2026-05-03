@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 const FEATURED_SLUGS = [
   "ctrl-alt-deity",
   "fractal-breaths",
+  "far-out",
   "hikemussbleiben",
   "ai-bootcamp",
 ];
@@ -133,13 +134,13 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* 1 wide + 2 side by side + 1 wide layout */}
+          {/* 1 wide hero + 2×2 grid below */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredProjects.map((project, i) => (
               <ProjectCard
                 key={project.id}
                 project={project}
-                featured={i === 0 || i === 3}
+                featured={i === 0}
               />
             ))}
           </div>
