@@ -155,78 +155,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Fractal Breaths Interactive Section */}
-      <section className="py-32 px-6 theme-terminal bg-[#050505] relative overflow-hidden flex flex-col items-center">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at center, #ff0000 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        />
-
-        <div className="container mx-auto max-w-5xl relative z-10 flex flex-col items-center">
-          <div className="text-center mb-16">
-            <Badge className="bg-primary/20 text-primary hover:bg-primary/30 border-primary/30 mb-4 font-mono rounded-none">
-              LIVE PROTOTYPE
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-serif mb-4">
-              Fractal Breaths
-            </h2>
-            <p className="font-mono text-muted-foreground">
-              Browser-based generative meditation visual engine
-            </p>
-          </div>
-
-          {/* Interactive Orb UI */}
-          <div className="w-full max-w-3xl aspect-[16/9] border border-border/40 bg-black/50 backdrop-blur-sm p-6 flex flex-col justify-between relative">
-            <div className="flex justify-between font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest z-10">
-              <div className="flex gap-4">
-                <span className="text-primary">Fractal Bloom</span>
-                <span className="hidden sm:inline">Mandala Pulse</span>
-                <span className="hidden md:inline">Wave Form</span>
-              </div>
-              <div>Fullscreen / Projector Mode</div>
+      {/* 5. Real-time AI Music Jam */}
+      <section className="py-24 px-6 bg-[#080808] border-t border-border/20">
+        <div className="container mx-auto max-w-5xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div>
+              <span className="font-mono text-xs text-primary tracking-widest uppercase block mb-3">
+                From the Lab
+              </span>
+              <h2 className="text-3xl md:text-4xl font-serif text-white">
+                Real-time AI Music Jam
+              </h2>
+              <p className="text-muted-foreground mt-3 font-mono text-sm max-w-lg">
+                Live prompt-based music control using MusicFX DJ Mode — AI as a
+                creative instrument, not a generator.
+              </p>
             </div>
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border border-primary/30 bg-primary/10 shadow-[0_0_50px_rgba(255,0,0,0.2)] animate-breathe mix-blend-screen" />
-              <div
-                className="absolute w-24 h-24 md:w-32 md:h-32 rounded-full border border-primary/50 bg-primary/20 animate-breathe"
-                style={{ animationDelay: "-8s" }}
-              />
-            </div>
-
-            <div className="flex justify-between font-mono text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest z-10">
-              <div className="flex gap-4">
-                <span>Deep Ocean</span>
-                <span className="hidden sm:inline">Forest Rain</span>
-              </div>
-              <div className="flex gap-3 text-white/50">
-                <span className="text-white">Inhale: 4s</span>
-                <span>Hold: 4s</span>
-                <span>Exhale: 6s</span>
-                <span>Rest: 2s</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 items-center">
-            <a
-              href="https://fractal-breaths.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-white font-mono text-sm px-6 py-3 hover:bg-primary/90 transition-colors"
-            >
-              Try it Live
-            </a>
             <Link
-              href="/work/fractal-breaths"
-              className="inline-block border border-border font-mono text-sm px-6 py-3 hover:border-primary hover:text-primary transition-colors"
+              href="/lab"
+              className="font-mono text-sm text-primary hover:underline whitespace-nowrap shrink-0"
             >
-              Read Case Study
+              See All Lab Work &rarr;
             </Link>
+          </div>
+
+          <div className="w-full aspect-video bg-black">
+            <iframe
+              src="https://www.youtube.com/embed/oehw1PPcZr4"
+              title="Real-time AI Music Jam"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
           </div>
         </div>
       </section>
