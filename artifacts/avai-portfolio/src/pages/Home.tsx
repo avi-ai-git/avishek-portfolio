@@ -47,15 +47,16 @@ export default function Home() {
               Avishek Chatterjee
             </p>
             <p className="font-mono text-primary text-sm md:text-base tracking-widest uppercase mb-12 flex items-center">
-              AI Creative Technologist · Berlin{" "}
+              Creative AI Technologist · Berlin{" "}
               <span className="inline-block w-3 h-5 bg-primary ml-2 cursor-blink" />
             </p>
 
             <div className="font-mono text-sm md:text-base text-muted-foreground space-y-2 mb-12 border-l border-border pl-4">
-              <p>&gt; AI FILMMAKING</p>
-              <p>&gt; GENAI WORKSHOPS</p>
-              <p>&gt; CAMPAIGN STORYTELLING</p>
-              <p>&gt; VISUAL PROTOTYPES</p>
+              <p>&gt; AI APPLICATIONS — STREAMLIT, PYTHON, RAG, PROMPT SYSTEMS</p>
+              <p>&gt; AI FILMMAKING — END-TO-END GENERATIVE PRODUCTION</p>
+              <p>&gt; CREATIVE PROTOTYPES — BROWSER EXPERIENCES, AUDIO, INTERACTIVE</p>
+              <p>&gt; AI EDUCATION — BOOTCAMPS, WORKSHOPS, CURRICULUM DESIGN</p>
+              <p>&gt; AI MARKETING — ADVOCACY CAMPAIGNS, CONTENT SYSTEMS</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 font-mono">
